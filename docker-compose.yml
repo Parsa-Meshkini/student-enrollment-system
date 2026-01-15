@@ -9,9 +9,13 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    networks:
+      - student-enrollment-network
 
   web:
     build: .
+    env_file:
+      - .env
     ports:
       - "8000:8000"
     environment:
@@ -28,6 +32,8 @@ services:
       - db
     volumes:
       - .:/app
+    networks:
+      - student-enrollment-network
 
   frontend:
     build: ./enrollment-frontend
@@ -39,6 +45,12 @@ services:
     depends_on:
       - web
     command: npm run dev -- --host 0.0.0.0 --port 5173
+    networks:
+      - student-enrollment-network
 
 volumes:
   pgdata:
+
+networks:
+  student-enrollment-network:
+    driver: bridge
