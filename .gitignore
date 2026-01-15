@@ -1,0 +1,17 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+db.sqlite3
+.env
+
+# Node
+enrollment-frontend/node_modules
+enrollment-frontend/dist
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
