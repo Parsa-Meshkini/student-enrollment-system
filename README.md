@@ -48,7 +48,7 @@ The project is designed to reflect real-world backend and full-stack development
 - Docker Compose
 
 ## 📁 Project Structure
-
+```text
 ├── Dockerfile
 ├── README.md
 ├── config
@@ -85,7 +85,7 @@ The project is designed to reflect real-world backend and full-stack development
 │   └── vite.config.js
 ├── manage.py
 ├── requirements.txt
-
+```
 ## Prerequisites
 
 *   Docker
